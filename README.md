@@ -73,7 +73,7 @@ a2enmod mpm_worker
 systemctl restart apache2
 apachectl -M | grep 'mpm'
 
-nano /etc/apache2/mods-available/mpm_worker.conf
+**nano /etc/apache2/mods-available/mpm_worker.conf**
 
     <IfModule mpm_worker_module>
             StartServers             4
@@ -89,7 +89,7 @@ systemctl restart apache2
 apache2ctl -t
 systemctl status apache2
 
-nano /etc/apache2/mods-available/fcgid.conf
+**nano /etc/apache2/mods-available/fcgid.conf**
 
     FcgidIdleTimeout 1200
     FcgidProcessLifeTime 1200
@@ -99,7 +99,7 @@ nano /etc/apache2/mods-available/fcgid.conf
 a2dismod ssl
 a2enmod remoteip
 
-nano /etc/apache2/apache2.conf
+**nano /etc/apache2/apache2.conf**
 
     Mutex file:${APACHE_LOCK_DIR} default
     Timeout 1200
@@ -110,10 +110,105 @@ nano /etc/apache2/apache2.conf
 
 /etc/init.d/apache2 restart
 
+mkdir -p /var/www/candycbt
+chown -R www-data:www-data /var/www/candycbt
 
+service apache2 restart
+apache2ctl configtest
 
+### INSTALL PHP 7.4
+apt-get update -y
+apt-get update --fix-missing
 
+apt install php7.4 php7.4-fpm php7.4-cgi php7.4-mbstring php7.4-curl php7.4-mysql php7.4-common libapache2-mod-php7.4 libapache2-mod-php7.4  php7.4-dev php7.4-bz2 php7.4-curl php7.4-intl php7.4-bcmath php7.4-cli php7.4-soap php7.4-zip php7.4-opcache php7.4-pdo php7.4-dom php7.4-apcu php7.4-xml php7.4-xmlrpc php7.4-gd php7.4-gettext php7.4-enchant -y
 
+nano /etc/apache2/sites-available/candycbt.conf
+
+<VirtualHost *:80>
+    ServerName localhost
+    ServerAdmin tjkt@localhost
+    DocumentRoot /var/www/candycbt
+    
+	<Directory /var/www/candycbt>
+		Options Indexes FollowSymLinks
+		Order allow,deny
+		Allow from all
+		AllowOverride All
+		Require all granted
+	</Directory>
+
+    <FilesMatch \.php$>
+        SetHandler "proxy:unix:/var/run/php/php7.4-fpm.sock|fcgi://localhost"
+    </FilesMatch>
+</VirtualHost> 
+
+a2ensite candycbt
+systemctl restart apache2
+apachectl configtest
+
+a2enmod actions fcgid alias proxy_fcgi setenvif
+a2enconf php7.4-cgi
+a2dismod php7.4
+a2enconf php7.4-fpm
+a2enmod rewrite
+phpenmod pdo_mysql
+
+systemctl restart apache2
+systemctl start php7.4-fpm
+systemctl enable php7.4-fpm
+
+echo '<?php phpinfo(); ?>' > /var/www/candycbt/info.php
+systemctl restart php7.4-fpm apache2
+
+**nano /etc/php/7.4/fpm/php.ini**
+
+    date.timezone = "Asia/Jakarta"
+    allow_url_fopen = off
+    display_errors = off
+    expose_php = Off
+    log_errors = on
+    upload_max_filesize = 32M
+    post_max_size = 0
+    memory_limit = -1
+    max_execution_time = 0
+    max_input_vars = 3000
+    max_input_time = -1
+    max_file_uploads = 20000
+
+**nano /etc/php/7.4/fpm/pool.d/www.conf**
+
+    pm = dynamic
+    pm.max_children = 36
+    pm.start_servers = 4
+    pm.min_spare_servers = 2
+    pm.max_spare_servers = 6
+    pm.process_idle_timeout = ondemand
+    pm.max_requests=0
+
+systemctl restart php7.4-fpm apache2
+systemctl restart apache2 && systemctl restart php7.4-fpm
+systemctl restart apache2
+apachectl configtest
+
+php-fpm7.4 -t
+tail -f /var/log/php7.4-fpm.log
+
+### **KONFIGURASI MARIADB**
+apt update
+apt -y install mariadb-server
+
+nano /etc/mysql/mariadb.conf.d/50-server.cnf
+
+systemctl restart mariadb
+systemctl status mariadb
+
+**mysql_secure_installation**
+
+    Set root password? [Y/n] y
+    Remove anonymous users? [Y/n] y
+    Disallow root login remotely? [Y/n] y
+    Remove test database and access to it? [Y/n] y
+    Reload privilege tables now? [Y/n] y
 
 
 
