@@ -31,9 +31,9 @@ VHD ini merupakan cloud image dari aplikasi yang dikembangkan oleh https://cbtca
 - File Manager	: **Tiny File Manager**
 
 -----
-### **KONFIGURASI UBUNTU 20.04**
+## **KONFIGURASI UBUNTU 20.04**
 
-##### **REPOSITORY UBUNTU SERVER 20.04**
+### **REPOSITORY UBUNTU SERVER 20.04**
 **nano /etc/apt/sources.list**
 
     deb http://buaya.klas.or.id/ubuntu/ focal main restricted
@@ -51,7 +51,7 @@ apt-get update
 apt-get upgrade
 reboot
 
-##### **KONFIGURASI SSH**
+### **KONFIGURASI SSH**
 **nano /etc/ssh/sshd_config**
 
     port 22
@@ -60,7 +60,7 @@ reboot
 systemctl restart ssh
 Remote dengan Putty / Kitty
 
-##### INSTALL WEB SERVER APACHE 2
+### INSTALL WEB SERVER APACHE 2
 apt update
 apt install apache2 apache2-utils apache2-bin apache2-data libapache2-mod-fcgid -y
 service apache2 start
