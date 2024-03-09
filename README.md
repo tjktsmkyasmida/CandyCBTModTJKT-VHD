@@ -1,23 +1,27 @@
-# CandyCBTModTJKT-VHD
+# **CandyCBTModTJKT-VHD**
 VHD ini merupakan cloud image dari aplikasi yang dikembangkan oleh https://cbtcandy.com/ adapun, image ini sudah dioptimasi untuk kebutuhan ujian online bersama secara offline.
 
-### BAHAN
+### **BAHAN**
 - VirtualBox 7.0.14
 - ubuntu-20.04.6-live-server-amd64.iso
 - Koneksi Internet
 - Kopi Hitam + Rokok Surya
 
-### SETTINGANKU
+### **SETTINGANKU**
 - Type    : **Linux**
 - Version  : **Ubuntu 20.04 LTS (Focal Fossa) (64-bit)**
 - RAM  : **4096 MB**
 - CPU  : **4 CPUs**
 - HDD  : **8 GB**
-- Adapter 1  : **NAT**
-- Adapter 2  : **Bridge Adapter**
-- Adapter 3  : **Host-only Adapter**
+- Network :
+  * Adapter 1  : **NAT**
+  * Adapter 2  : **Bridge Adapter**
+  * Adapter 3  : **Host-only Adapter**
+- Extended Features :
+  * Enable PAE/NX
+  * Enable Nested VT-x/AMD-V
 
-### CATATAN
+### **CATATAN**
 - Webserver	: **Apache2.4.41**
 - Php		: **php7.4-fpm / 7.4.33**
 - Database	: **MariaDB-10.3.39**
