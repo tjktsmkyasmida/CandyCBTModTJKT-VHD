@@ -1,11 +1,11 @@
-M""""""""M MMMMMMMM""M M""MMMMM""M M""""""""M    MP""""""`MM M""MMMM""M MM'""""'YMM MMP"""""""MM 
-Mmmm  mmmM MMMMMMMM  M M  MMMM' .M Mmmm  mmmM    M  mmmmm..M M. `MM' .M M' .mmm. `M M' .mmmm  MM 
-MMMM  MMMM MMMMMMMM  M M       .MM MMMM  MMMM    M.      `YM MM.    .MM M  MMMMMooM M         `M 
-MMMM  MMMM MMMMMMMM  M M  MMMb. YM MMMM  MMMM    MMMMMMM.  M MMMb  dMMM M  MMMMMMMM M  MMMMM  MM 
-MMMM  MMMM M. `MMM' .M M  MMMMb  M MMMM  MMMM    M. .MMM'  M MMMM  MMMM M. `MMM' .M M  MMMMM  MM 
-MMMM  MMMM MM.     .MM M  MMMMM  M MMMM  MMMM    Mb.     .dM MMMM  MMMM MM.     .dM M  MMMMM  MM 
-MMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMM    MMMMMMMMMMM MMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMMM 
-                                                                                                                                                                                                
+::::::::::: ::::::::::: :::    ::: :::::::::::       ::::::::  :::   :::  ::::::::      :::     
+    :+:         :+:     :+:   :+:      :+:          :+:    :+: :+:   :+: :+:    :+:   :+: :+:   
+    +:+         +:+     +:+  +:+       +:+          +:+         +:+ +:+  +:+         +:+   +:+  
+    +#+         +#+     +#++:++        +#+          +#++:++#++   +#++:   +#+        +#++:++#++: 
+    +#+         +#+     +#+  +#+       +#+                 +#+    +#+    +#+        +#+     +#+ 
+    #+#     #+# #+#     #+#   #+#      #+#          #+#    #+#    #+#    #+#    #+# #+#     #+# 
+    ###      #####      ###    ###     ###           ########     ###     ########  ###     ### 
+    
 # **CandyCBTModTJKT-VHD**
 VHD ini merupakan cloud image dari aplikasi yang dikembangkan oleh https://cbtcandy.com/ adapun, image ini sudah dioptimasi untuk kebutuhan ujian online bersama secara offline.
 
