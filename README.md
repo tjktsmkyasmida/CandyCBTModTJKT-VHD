@@ -35,6 +35,7 @@ VHD ini merupakan cloud image dari aplikasi yang dikembangkan oleh https://cbtca
 
 ##### REPOSITORY UBUNTU SERVER 20.04
 nano /etc/apt/sources.list
+
     deb http://buaya.klas.or.id/ubuntu/ focal main restricted
     deb http://buaya.klas.or.id/ubuntu/ focal-updates main restricted
     deb http://buaya.klas.or.id/ubuntu/ focal universe
@@ -52,6 +53,7 @@ reboot
 
 ##### KONFIGURASI SSH
 nano /etc/ssh/sshd_config
+
     port 22
     Permit RootLogin Yes
 
