@@ -1,10 +1,4 @@
-::::::::::: ::::::::::: :::    ::: :::::::::::       ::::::::  :::   :::  ::::::::      :::     
-    :+:         :+:     :+:   :+:      :+:          :+:    :+: :+:   :+: :+:    :+:   :+: :+:   
-    +:+         +:+     +:+  +:+       +:+          +:+         +:+ +:+  +:+         +:+   +:+  
-    +#+         +#+     +#++:++        +#+          +#++:++#++   +#++:   +#+        +#++:++#++: 
-    +#+         +#+     +#+  +#+       +#+                 +#+    +#+    +#+        +#+     +#+ 
-    #+#     #+# #+#     #+#   #+#      #+#          #+#    #+#    #+#    #+#    #+# #+#     #+# 
-    ###      #####      ###    ###     ###           ########     ###     ########  ###     ### 
+![image.png](https://tjkt.smkyasmida.sch.id/wp-content/uploads/2023/01/tjktxyz.png)
     
 # **CandyCBTModTJKT-VHD**
 VHD ini merupakan cloud image dari aplikasi yang dikembangkan oleh https://cbtcandy.com/ adapun, image ini sudah dioptimasi untuk kebutuhan ujian online bersama secara offline.
