@@ -4,10 +4,10 @@
 VHD ini merupakan cloud image dari aplikasi yang dikembangkan oleh https://cbtcandy.com/ adapun, image ini sudah dioptimasi untuk kebutuhan ujian online bersama secara offline.
 
 ### **BAHAN**
-- Aplikasi : VirtualBox 7.0.14
-- Sistem Operasi : ubuntu-20.04.6-live-server-amd64.iso
+- Aplikasi : **VirtualBox 7.0.14**
+- Sistem Operasi : **ubuntu-20.04.6-live-server-amd64.iso**
 - Koneksi Internet
-- Sajen : Kopi Hitam + Rokok Surya
+- Sajen : Kopi Hitam + Surya 16
 
 ### **SETTINGANKU**
 - Type    : **Linux**
