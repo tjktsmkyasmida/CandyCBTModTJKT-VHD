@@ -30,28 +30,11 @@ VHD ini merupakan cloud image dari aplikasi yang dikembangkan oleh https://cbtca
 - PhpMyAdmin	:
 - File Manager	: **Tiny File Manager**
 
+-----
 ### **KONFIGURASI UBUNTU 20.04**
-================================================================================
+
 ##### REPOSITORY UBUNTU SERVER 20.04
-================================================================================
 nano /etc/apt/sources.list
-
-    deb http://repo.ugm.ac.id/ubuntu focal main restricted universe multiverse
-    deb http://repo.ugm.ac.id/ubuntu focal-updates main restricted universe multiverse
-    deb http://repo.ugm.ac.id/ubuntu focal-security main restricted universe multiverse
-    deb http://repo.ugm.ac.id/ubuntu focal-backports main restricted universe multiverse
-    deb http://repo.ugm.ac.id/ubuntu focal-proposed main restricted universe multiverse
-
-atau
-
-    deb http://mirror.biznetgio.com/ubuntu/ focal main restricted universe multiverse
-    deb http://mirror.biznetgio.com/ubuntu/ focal-updates main restricted universe multiverse
-    deb http://mirror.biznetgio.com/ubuntu/ focal-security main restricted universe multiverse
-    deb http://mirror.biznetgio.com/ubuntu/ focal-backports main restricted universe multiverse
-    deb http://mirror.biznetgio.com/ubuntu/ focal-proposed main restricted universe multiverse
-
-atau
-
     deb http://buaya.klas.or.id/ubuntu/ focal main restricted
     deb http://buaya.klas.or.id/ubuntu/ focal-updates main restricted
     deb http://buaya.klas.or.id/ubuntu/ focal universe
@@ -64,23 +47,18 @@ atau
     deb http://buaya.klas.or.id/ubuntu/ focal-security multiverse
 
 apt-get update
-================================================================================
+apt-get upgrade
+reboot
 
-================================================================================
 ##### KONFIGURASI SSH
-================================================================================
 nano /etc/ssh/sshd_config
     port 22
     Permit RootLogin Yes
 
 systemctl restart ssh
 
-apt-get update
-apt-get upgrade
-reboot
-
 REMOTE MAKEK PUTTY
-================================================================================
+
 
 
 
